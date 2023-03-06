@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet">
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="./CSS/styles.css">
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./CSS/styles.css" />
   </head>
   <body>
-
     <!-- header -->
 
     <header>
@@ -57,13 +58,12 @@
     <!-- main -->
 
     <main>
-      
       <!-- section1 -->
 
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">
-            Effective Solutions <br>
+            Effective Solutions <br />
             for Your Business
           </h1>
           <button type="button" class="main-button" data-modal-open>
@@ -143,21 +143,24 @@
               <img
                 src="./images/picture1.jpg"
                 alt="white monitor with info"
-                width="360">
+                width="360"
+              />
             </li>
 
             <li class="item">
               <img
                 src="./images/picture2.jpg"
                 alt="work of application on the phone"
-                width="360">
+                width="360"
+              />
             </li>
 
             <li class="item">
               <img
                 src="./images/picture3.jpg"
                 alt="view of application on the phone"
-                width="360">
+                width="360"
+              />
             </li>
           </ul>
         </div>
@@ -170,7 +173,7 @@
           <h2 class="section-title">Our Team</h2>
           <ul class="team list">
             <li class="item">
-              <img src="./images/photo1.jpg" alt="photo of a man" width="264">
+              <img src="./images/photo1.jpg" alt="photo of a man" width="264" />
               <div class="team-content">
                 <h3 class="team-list">Mark Guerrero</h3>
                 <p class="descr">Product Designer</p>
@@ -219,7 +222,7 @@
             </li>
 
             <li class="item">
-              <img src="./images/photo2.jpg" alt="photo of a man" width="264">
+              <img src="./images/photo2.jpg" alt="photo of a man" width="264" />
               <div class="team-content">
                 <h3 class="team-list">Tom Ford</h3>
                 <p class="descr">Frontend Developer</p>
@@ -271,7 +274,8 @@
               <img
                 src="./images/photo3.jpg"
                 alt="photo of a woman"
-                width="264">
+                width="264"
+              />
               <div class="team-content">
                 <h3 class="team-list">Camila Garcia</h3>
                 <p class="descr">Marketing</p>
@@ -320,7 +324,7 @@
             </li>
 
             <li class="item">
-              <img src="./images/photo4.jpg" alt="photo of a man" width="264">
+              <img src="./images/photo4.jpg" alt="photo of a man" width="264" />
               <div class="team-content">
                 <h3 class="team-list">Daniel Wilson</h3>
                 <p class="descr">UI Designer</p>
@@ -469,7 +473,7 @@
                 </svg>
               </a>
             </li>
-            
+
             <li class="social-item">
               <a href="#" class="footer-social-link">
                 <svg class="footer-social-icon">
@@ -491,21 +495,52 @@
             <use href="./images/symbol-defs2.svg#icon-close-icon"></use>
           </svg>
         </button>
-        <h2>
-          Leave your contacts and we will call you back
-        </h2>
-        <form name="contact-form" autocomplete="off" novalidate>
-          <label for="user-name">Name</label>
-          <input id="user-name" type="text" name="user-name">
-
-          <label for="user-phone">Phone</label>
-          <input id="user-phone" type="tel" name="user-phone">
-
-          <label for="user-email">Email</label>
-          <input id="user-email" type="email" name="user-email">
-
-          <label for="user-comment">Comment</label>
-          <textarea name="user-comment" id="user-comment" placeholder="Text input"></textarea>
+        <form class="modal-form">
+          <label class="modal-form-lield">
+            <span class="modal-form-input-desc">Name</span>
+            <input
+              type="text"
+              name="user_name"
+              class="modal-form-input"
+              required
+              pattern="^[a-zA-Z]+"
+              minlength="2"
+            />
+          </label>
+          <label class="modal-form-lield">
+            <span class="modal-form-input-desc">Phone</span>
+            <input
+              type="tel"
+              name="user_phone"
+              class="modal-form-input"
+              required
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+              title="xxx-xxx-xx-xx"
+            />
+          </label>
+          <label class="modal-form-lield">
+            <span class="modal-form-input-desc">Email</span>
+            <input
+              type="email"
+              name="user_email"
+              class="modal-form-input"
+              required
+            />
+          </label>
+          <label class="modal-form-lield">
+            <span class="modal-form-input-desc">Comment</span>
+            <textarea
+              name="user_message"
+              class="modal-form-message"
+              placeholder="Text input"
+            ></textarea>
+          </label>
+          <input id="user-policy" type="checkbox" name="user_policy" class="modal-form-check" />
+          <label for="user-policy" class="modal-form-check-desc"
+            >I accept the terms and conditions of the
+            <a href="">Privacy Policy</a></label
+          >
+          <button type="submit" class="modal-form-submit">Send</button>
         </form>
       </div>
     </div>
